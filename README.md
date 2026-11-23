@@ -17,7 +17,7 @@ El HTML de la raíz se ha restaurado a partir del HTML fuente del paquete origin
 - Comparación de cuadrículas: 859 mosaicos presentes y 5.549 coordenadas no encontradas en el ZIP de recursos.
 - Solo 11 de las 14 miniaturas panorámicas están presentes.
 - Los archivos `script.js` y `lib/tdvplayer.js` duplicados en las dos rutas del ZIP tienen el mismo SHA-256.
-- Una prueba de preparación con el mapeo del script actual produjo un staging de 958 archivos (aprox. 91,9 MB); esto no certifica que todos los medios necesarios estén presentes.
+- Una prueba de preparación con el mapeo del script actual produjo un staging de 956 archivos (aprox. 91,9 MB); esto no certifica que todos los medios necesarios estén presentes.
 
 Detalle y limitaciones: [docs/AUDITORIA_RECUPERACION_2026-11-23.md](docs/AUDITORIA_RECUPERACION_2026-11-23.md).
 

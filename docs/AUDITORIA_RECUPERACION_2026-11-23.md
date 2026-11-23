@@ -60,7 +60,7 @@ La auditoría granular de coordenadas está disponible en los artefactos locales
 
 Se probó el mapeo de rutas de `tools/prepare_pages.py` contra una estructura combinada de los dos ZIP:
 
-- 958 archivos copiados al staging.
+- 956 archivos copiados al staging.
 - Aproximadamente 91,9 MB copiados.
 - `index.html`, `lib/tdvplayer.js` y `script_general.js` presentes.
 - 948 JPG en `media/`.
@@ -86,4 +86,4 @@ No se alteró el workflow para publicar una versión incompleta. No se afirmó q
 
 ## Actualización: defecto de la carpeta envolvente
 
-La prueba con la estructura real del ZIP detectó que la versión anterior del preparador no reconocía los archivos runtime bajo la carpeta superior tour/. Se corrigió el mapeo para retirar solo ese primer componente antes de resolver rutas. La prueba posterior produjo 958 archivos y dejó presentes index.html, lib/tdvplayer.js, script.js, script_general.js, locale/es.txt y socialThumbnail.jpg. Se añadieron seis pruebas unitarias para cubrir la estructura con envoltura, la estructura de recursos recuperados y la exclusión de null e informes.
+La prueba con la estructura real del ZIP detectó que la versión anterior del preparador no reconocía los archivos runtime bajo la carpeta superior tour/. Se corrigió el mapeo para retirar solo ese primer componente antes de resolver rutas. La prueba posterior produjo 956 archivos y dejó presentes index.html, lib/tdvplayer.js, script.js, script_general.js, locale/es.txt y socialThumbnail.jpg. Se añadieron seis pruebas unitarias para cubrir la estructura con envoltura, la estructura de recursos recuperados y la exclusión de null e informes.

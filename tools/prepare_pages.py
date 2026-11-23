@@ -34,6 +34,9 @@ def destination_for(source_root: Path, file_path: Path) -> Path | None:
 
     if rel.parts and rel.parts[0] == "recursos_recuperados":
         rel = Path(*rel.parts[1:])
+        # The unnamed HTML and downloader report are audit evidence, not site assets.
+        if len(rel.parts) == 1 and (rel.name == "null" or rel.name.startswith("reporte_")):
+            return None
     elif rel.parts[:len(HOST_PREFIX.parts)] == HOST_PREFIX.parts:
         rel = Path(*rel.parts[len(HOST_PREFIX.parts):])
     elif rel.parts and rel.parts[0] in {"lib", "locale"}:

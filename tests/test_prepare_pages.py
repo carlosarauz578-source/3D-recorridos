@@ -33,6 +33,10 @@ class DestinationForTests(unittest.TestCase):
         path = self.source / 'recursos_recuperados/null'
         self.assertIsNone(destination_for(self.source, path))
 
+    def test_ignores_download_report(self):
+        path = self.source / 'recursos_recuperados/reporte_descarga_selectiva.json'
+        self.assertIsNone(destination_for(self.source, path))
+
     def test_ignores_audit_reports(self):
         path = self.source / 'tour/resultado3.txt'
         self.assertIsNone(destination_for(self.source, path))
