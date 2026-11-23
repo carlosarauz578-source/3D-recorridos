@@ -82,3 +82,8 @@ No se alteró el workflow para publicar una versión incompleta. No se afirmó q
 4. Confirmar si el tour usa PDF, audio, vídeo, modelos 3D u otros recursos condicionales.
 5. Ejecutar `tools/prepare_pages.py` con la carpeta fuente completa y verificar el recorrido localmente.
 6. Solo entonces incorporar `site/` y ejecutar GitHub Pages.
+
+
+## Actualización: defecto de la carpeta envolvente
+
+La prueba con la estructura real del ZIP detectó que la versión anterior del preparador no reconocía los archivos runtime bajo la carpeta superior tour/. Se corrigió el mapeo para retirar solo ese primer componente antes de resolver rutas. La prueba posterior produjo 958 archivos y dejó presentes index.html, lib/tdvplayer.js, script.js, script_general.js, locale/es.txt y socialThumbnail.jpg. Se añadieron seis pruebas unitarias para cubrir la estructura con envoltura, la estructura de recursos recuperados y la exclusión de null e informes.

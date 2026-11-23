@@ -26,6 +26,12 @@ def normalized_name(name: str) -> str:
 def destination_for(source_root: Path, file_path: Path) -> Path | None:
     rel = file_path.relative_to(source_root)
 
+    # The supplied tour.zip has a top-level tour/ wrapper. Support both that
+    # extracted layout and a source directory whose contents are already at
+    # the root, without changing the original files.
+    if rel.parts and rel.parts[0] == "tour":
+        rel = Path(*rel.parts[1:])
+
     if rel.parts and rel.parts[0] == "recursos_recuperados":
         rel = Path(*rel.parts[1:])
     elif rel.parts[:len(HOST_PREFIX.parts)] == HOST_PREFIX.parts:

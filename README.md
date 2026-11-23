@@ -53,3 +53,8 @@ El workflow publica únicamente `site/`. No se ha cambiado para aceptar una carp
 Recorrido de referencia: https://storage.net-fs.com/hosting/2727323/443/index.htm
 
 La distribución debe respetar los derechos del propietario del recorrido y las licencias de 3DVista y terceros. No se incorporan recursos externos de otros tours como sustitutos.
+
+
+## Compatibilidad del preparador
+
+El preparador ahora acepta la estructura extraída del ZIP con una carpeta superior llamada tour, además de fuentes que ya tengan los archivos en la raíz. Se añadieron pruebas unitarias para ambas rutas y para excluir archivos de auditoría o el recurso sin nombre.
